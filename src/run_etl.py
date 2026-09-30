@@ -1,7 +1,10 @@
 # run_etl.py
-from extract import extract
-from load import load_raw
+from extract import extract_supermarket_data
+
+
+def run_etl():
+    extract_supermarket_data()
+ 
 
 if __name__ == "__main__":
-    df = extract()
-    load_raw(df)
+    run_etl()    
