@@ -15,9 +15,7 @@ def extract_supermarket_data():
 
 if __name__ == "__main__":
     df = extract_supermarket_data()
-    print(df.head())
-    print(df.shape)
-    
+  
     
 df.to_sql("supermarket_raw", con = engine_supermarket, if_exists="replace", index=False)
 print("Dados gravados em public.supermarket_raw")
