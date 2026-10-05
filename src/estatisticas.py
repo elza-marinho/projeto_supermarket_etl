@@ -20,8 +20,6 @@ os.makedirs("charts", exist_ok=True)
 fig.savefig("charts/faturamento_filial.png")
 plt.show()
 
-
-
 # Qual filial realizou a maior quantidade de vendas?
 vendas_por_filial = df.groupby("filial")["id_venda"].count().sort_values(ascending=False)
 fig, ax = plt.subplots(figsize=(8, 5))
@@ -37,8 +35,6 @@ fig.tight_layout()
 os.makedirs("charts", exist_ok=True)
 fig.savefig("charts/vendas_filial.png")
 plt.show()
-
-
 
 
 #Qual linha de produto apresentou o maior faturamento?
@@ -111,8 +107,6 @@ plt.show()
 #  Qual foi o valor médio das vendas?
 
 media_vendas = df['vendas'].mean()
-
-
 
 #Qual foi a maior venda registrada?
 maior_venda = df['vendas'].max()
